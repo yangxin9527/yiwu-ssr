@@ -1,15 +1,25 @@
 import Head from 'next/head'
 import Link from 'next/link';
+import {Button} from 'antd-mobile'
+import "../styles.less"
+
 export default function Home() {
+
+
   return (
     <div className="container">
       <Head>
         <title>Next App</title>
         <link rel="icon" href="/favicon.ico" />
+          <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+
       </Head>
 
       <main>
         <h1 className='link' >red</h1>
+          <Button>test</Button>
+
+          <div className="example">Hello World!<h1 className='green' >red</h1></div>
         <Link href={'/posts'}>   Welcome !!!</Link>
 
 
