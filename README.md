@@ -1,8 +1,8 @@
 This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 
-## 支持 less
+## 支持 less 和 antd
 
-- npm install --save @zeit/next-less less
+- https://dev.to/burhanuday/using-ant-design-with-nextjs-custom-variables-for-ant-design-57m5
 
 
 ## 支持 ts

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link';
-import {Button} from 'antd-mobile'
 import "../styles.less"
+import {Button} from "antd";
 
 export default function Home() {
 
@@ -17,8 +17,7 @@ export default function Home() {
 
       <main>
         <h1 className='link' >red</h1>
-          <Button>test</Button>
-
+          <Button >test</Button>
           <div className="example">Hello World!<h1 className='green' >red</h1></div>
         <Link href={'/posts'}>   Welcome !!!</Link>
 
