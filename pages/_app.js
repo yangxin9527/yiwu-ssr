@@ -1,6 +1,5 @@
 import React from "react";
 import App from "next/app";
-
 import "../styles/antd.less";
 
 class MyApp extends App {

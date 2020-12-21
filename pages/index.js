@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import "../styles.less"
-import {Button} from "antd";
+import {Button} from "antd-mobile";
 
 export default function Home() {
 

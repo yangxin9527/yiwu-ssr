@@ -1,8 +1,11 @@
-
+import Head from "next/head";
 
 function Post({ FindData }) {
     return (
         <div>
+            <Head>
+                <title>{FindData.Name}</title>
+            </Head>
             <div className="articleItem">
                 <div className="userBar-wrap">
                     <div className="user-info">
@@ -16,7 +19,6 @@ function Post({ FindData }) {
                                 className="vip-component-wrap vip-0"></div></div>
                             <taro-text-core className="time">{FindData.time}</taro-text-core>
                         </div>
-                        <div className="userItem-btn">+ 关注</div>
                     </div>
                 </div>
                 <div className="content">

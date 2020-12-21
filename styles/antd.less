@@ -1,4 +1,6 @@
-@import "../node_modules/antd/dist/antd.less";
+@import "../node_modules/antd-mobile/dist/antd-mobile.less";
+@import "./avatar.less";
+@import "./article.less";
 
 @primary-color: #000; // primary color for all components
 @link-color: #1890ff; // link color
@@ -14,8 +16,37 @@
 @border-color-base: #d9d9d9; // major border color
 @box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); // major shadow for layers
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 20px
+}
+.ellipsis{
+  display: -webkit-box;
 
+  overflow: hidden;
 
+  text-overflow: ellipsis;
+
+  word-wrap: break-word;
+
+  white-space: normal !important;
+
+  -webkit-line-clamp: 1;
+
+  -webkit-box-orient: vertical;
+}
+.ellipsis2{
+  .ellipsis();
+  -webkit-line-clamp: 2;
+}
+.ellipsis3{
+  .ellipsis2();
+  -webkit-line-clamp: 3;
+}
 .avatar-wrap {
   position: relative;
   -webkit-flex-shrink: 0;
@@ -60,7 +91,6 @@
   border-radius: 50%;
   overflow: hidden;
 }
-
 .userBar-wrap{
   .avatar-wrap{
     margin-right: 13px;
