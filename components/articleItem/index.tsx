@@ -66,7 +66,7 @@ class ArticleItem extends Component {
           {transText(item.ForwardedText)}
           {item.ForwardedList&&item.ForwardedList.map((ForwardedItem,i)=>{
             // eslint-disable-next-line react/jsx-no-comment-textnodes
-            return(<React.Fragment key={i}> // <a className='name-link' url='userinfo' data={{id:ForwardedItem.MemberCode}} >@{ForwardedItem.Name}</a>: {transText(ForwardedItem.ForwardedText)}</React.Fragment>)
+            return(<React.Fragment key={i}> // <a className='name-link' >@{ForwardedItem.Name}</a>: {transText(ForwardedItem.ForwardedText)}</React.Fragment>)
           })}
         </div>}
 
