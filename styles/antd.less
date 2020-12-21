@@ -1,20 +1,5 @@
-@import "../node_modules/antd-mobile/dist/antd-mobile.less";
 @import "./avatar.less";
 @import "./article.less";
-
-@primary-color: #000; // primary color for all components
-@link-color: #1890ff; // link color
-@success-color: #52c41a; // success state color
-@warning-color: #faad14; // warning state color
-@error-color: #f5222d; // error state color
-@font-size-base: 14px; // major text font size
-@heading-color: rgba(0, 0, 0, 0.85); // heading text color
-@text-color: rgba(0, 0, 0, 0.65); // major text color
-@text-color-secondary: rgba(0, 0, 0, 0.45); // secondary text color
-@disabled-color: rgba(0, 0, 0, 0.25); // disable state color
-@border-radius-base: 4px; // major border radius
-@border-color-base: #d9d9d9; // major border color
-@box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); // major shadow for layers
 
 *{
   padding: 0;
@@ -22,7 +7,7 @@
   box-sizing: border-box;
 }
 body{
-  font-size: 20px
+  font-size: (20rem/100)
 }
 .ellipsis{
   display: -webkit-box;
@@ -54,8 +39,8 @@ body{
   flex-shrink: 0;
   line-height: 0;
   img{
-    width: 50px;
-    height: 50px;
+    width: (50rem/100);
+    height: (50rem/100);
     border-radius: 50%;
   }
 }
@@ -63,8 +48,8 @@ body{
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 20px;
-  height: 20px;
+  width: (20rem/100);
+  height: (20rem/100);
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -93,42 +78,42 @@ body{
 }
 .userBar-wrap{
   .avatar-wrap{
-    margin-right: 13px;
+    margin-right: (13rem/100);
   }
   .user-info{
-    margin-bottom: 30px;
+    margin-bottom: (30rem/100);
     line-height: 0;
     display: flex;
     align-items: center;
     .name{
-      font-size: 28px;
-      line-height: 32px;
+      font-size: (28rem/100);
+      line-height: (32rem/100);
       font-weight: 400;
       color: #646464;
-      margin-bottom: 20px;
+      margin-bottom: (20rem/100);
       .myImage{
-        max-width: 100px;
-        max-height: 32px;
+        max-width: 1(00rem/100);
+        max-height: (32rem/100);
         vertical-align: middle;
       }
     }
     .time{
-      font-size: 22px;
-      line-height: 22px;
+      font-size: (22rem/100);
+      line-height: (22rem/100);
       font-weight: 400;
       color: #999999;
     }
     .focus-on{
-      min-width: 100px;
-      padding: 0 10px;
-      height: 44px;
+      min-width: 1(00rem/100);
+      padding: 0 (10rem/100);
+      height: (44rem/100);
       display: flex;
       margin-left: auto;
       justify-content: center;
-      line-height: 44px;
+      line-height: (44rem/100);
       background: #E6BF84;
-      border-radius: 22px;
-      font-size: 22px;
+      border-radius: (22rem/100);
+      font-size: (22rem/100);
       font-weight: 400;
       color: #FFFFFF;
       &.on{

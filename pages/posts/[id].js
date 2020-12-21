@@ -1,36 +1,16 @@
 import Head from "next/head";
+import ArticleItem from "../../components/articleItem";
 
 function Post({ FindData }) {
     return (
         <div>
             <Head>
-                <title>{FindData.Name}</title>
+                <title>{FindData.Name}11</title>
+                <meta name="description" content={FindData.Content}/>
             </Head>
-            <div className="articleItem">
-                <div className="userBar-wrap">
-                    <div className="user-info">
-                        <div className="avatar-wrap" >
-                            <img src={FindData.Avatar} alt=""/>
-
-                            <div className="level">10</div>
-                        </div>
-                        <div className="hydrated">
-                            <div className="name">{FindData.Name} <div
-                                className="vip-component-wrap vip-0"></div></div>
-                            <taro-text-core className="time">{FindData.time}</taro-text-core>
-                        </div>
-                    </div>
-                </div>
-                <div className="content">
-                    <div className="content-text">
-                        <div className="topic-block-wrap">#{FindData.Topic}#</div>
-                        <div className="trans-text">{FindData.Content}
-                        </div>
-                    </div>
-                    <div className="imgList imgList-3">
-                    </div>
-                </div>
-            </div>
+            <ArticleItem
+                item={FindData}
+            />
 
         </div>
     )

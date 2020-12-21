@@ -7,6 +7,7 @@ function Post({list}) {
         <div>
             <Head>
                 <script src="/public.js"></script>
+
             </Head>
           <div>
               {list.map((item, i) => (
