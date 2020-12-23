@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 
+
 type PageStateProps = {
   className?: string,
   src?: string,
@@ -34,13 +35,7 @@ class Avatar extends Component {
       this.props.onClick();
     }
   }
-  componentWillReceiveProps(nextProps:any) {
-    if(nextProps.src!==this.state.src){
-      this.setState({
-        src:nextProps.src
-      })
-    }
-  }
+
 
   render() {
     const {className = "",  level,Gender} = this.props;

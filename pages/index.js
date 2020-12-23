@@ -1,15 +1,30 @@
 import Link from "next/link";
 import Head from "next/head";
 import ArticleItem from 'components/articleItem'
+import Header from 'components/header'
+import Router from "next/router";
+import Btn from 'components/btn'
+function historyPush(){
+    Router.push({
+        pathname:'c',
+        query:{
+            name:'仓'
+        }
+    })
+}
 
 function Post({list}) {
     return (
         <div>
             <Head>
                 <script src="/public.js"></script>
-
             </Head>
             <div>
+                <Header>头</Header>
+                <Btn>按钮</Btn>
+                <Link  href={{pathname:'/c',query:{name:'bbbbbbbbb'}}}>去b</Link>
+                <Link  href={{pathname:'/time'}}>去time</Link>
+                <button onClick={()=>{historyPush()}}>test</button>
                 {list.map((item, i) => (
                     <Link href={'/posts/' + item.FindCode} key={i}>
                         <div>

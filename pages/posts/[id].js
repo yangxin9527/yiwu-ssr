@@ -5,7 +5,7 @@ function Post({ FindData }) {
     return (
         <div>
             <Head>
-                <title>{FindData.Name}11</title>
+                <title>{FindData.Name}</title>
                 <meta name="description" content={FindData.Content}/>
             </Head>
             <ArticleItem
