@@ -30,7 +30,7 @@ function Post({list}) {
                                         </div>
                                         <figcaption className="m-4">
                                             <p className="text-sm font-medium w-full text-gray-900 truncate ">{item.Content}</p>
-                                            <p className="mt-3 flex justify-between  text-sm text-gray-500"><img src={item.Avatar} className='w-6' alt=""/><span>{item.Name}</span></p>
+                                            <p className="mt-3 flex justify-between  text-sm text-gray-500"><img src={item.Avatar} className='w-6 h-6' alt=""/><span>{item.Name}</span></p>
                                         </figcaption>
                                     </figure>
                                 </a>
