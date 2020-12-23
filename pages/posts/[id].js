@@ -109,7 +109,6 @@ export async function getStaticPaths() {
         let list = data.data.list
         paths = list.map((post) => `/posts/${post.FindCode}`)
     }
-    console.log('[id] 详情','getStaticPaths')
     // We'll pre-render only these paths at build time.
     // { fallback: false } means other routes should 404.
     return { paths, fallback: false }
@@ -131,7 +130,6 @@ export async function getStaticProps({ params }) {
     if(res&&res.code==='200'){
         data = res.data;
     }
-console.log(res.data)
     // 通过 props 参数向页面传递博文的数据
     return { props: { ...data} }
 }
