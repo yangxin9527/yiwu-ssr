@@ -1,44 +1,45 @@
 import Link from "next/link";
-import Head from "next/head";
 import ArticleItem from 'components/articleItem'
-import Header from 'components/header'
-import Router from "next/router";
-import Btn from 'components/btn'
-function historyPush(){
-    Router.push({
-        pathname:'c',
-        query:{
-            name:'仓'
-        }
-    })
-}
+
 
 function Post({list}) {
+    console.log(list)
     return (
         <div>
-            <Head>
-                <script src="/public.js"></script>
-            </Head>
-            <div>
-                <Header>头</Header>
-                <Btn>按钮</Btn>
-                <Link  href={{pathname:'/c',query:{name:'bbbbbbbbb'}}}>去b</Link>
-                <Link  href={{pathname:'/time'}}>去time</Link>
-                <button onClick={()=>{historyPush()}}>test</button>
-                {list.map((item, i) => (
-                    <Link href={'/posts/' + item.FindCode} key={i}>
-                        <div>
-                            <ArticleItem
-                                ellipsis
-                                item={item}
-                                enableClick
-                            />
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+                <header className="flex justify-between items-center py-1">
+                    <div><a aria-label="Tailwind CSS Blog" href="/">
+                        <img className='w-16' src="/logo.png" alt=""/>
+                    </a></div>
+                    <div className="text-base leading-5">
+                    <span className="font-medium text-gray-500 hover:text-gray-700">
+                            一物文玩
+                        </span>
+                    </div>
+                </header>
+                <div className="border-t border-gray-200 pt-8 grid grid-cols-1 gap-y-6 lg:grid-cols-4 lg:gap-5">
+                    <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-6 md:grid-cols-4 lg:col-span-4">
 
-                        </div>
-                    </Link>
-                ))}
+                        {list.map((item, i) => (
+                            <Link href={'/posts/' + item.FindCode} key={i}>
+                                <a className="block group">
+                                    <figure>
+                                        <div className="relative rounded h-72 md:h-32 overflow-hidden transition transform duration-150 ease-in-ouit ">
+                                            <img className="w-full h-auto"
+                                                 src={item.Image[0]} alt="" />
+                                        </div>
+                                        <figcaption className="m-4">
+                                            <p className="text-sm font-medium w-full text-gray-900 truncate ">{item.Content}</p>
+                                            <p className="mt-3 flex justify-between  text-sm text-gray-500"><img src={item.Avatar} className='w-6' alt=""/><span>{item.Name}</span></p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </Link>
+                        ))}
+
+                    </div>
+                </div>
             </div>
-
         </div>
     )
 }

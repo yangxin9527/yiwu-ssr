@@ -1,12 +1,10 @@
 import React from "react";
 import App from "next/app";
-// import "../styles/antd.less";
-import 'styles/btn.scss'
+import '../styles/globals.css'
 
 class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props;
-
         return <Component {...pageProps} />;
     }
 }

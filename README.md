@@ -1,6 +1,6 @@
 This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 
-## 支持 less 和 antd
+## 支持 less,sass,css module 和 antd
 
 - https://dev.to/burhanuday/using-ant-design-with-nextjs-custom-variables-for-ant-design-57m5 
 

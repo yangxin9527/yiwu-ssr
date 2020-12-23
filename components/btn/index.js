@@ -1,7 +1,8 @@
-import {btn,test} from './Button.module.scss'
+import styles from './Button.module.scss'
 export default function Index({children}) {
-    return <button className={btn}>
+    return <button className={styles.btn}>
         {children}
-        <span className={test}>test</span>
+        <span className={styles.test}>test</span>
+        <span className='test222'>test</span>
     </button>
 }
